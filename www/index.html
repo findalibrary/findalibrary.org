@@ -20,7 +20,8 @@
         }
 
         .container {
-            width: 80%;
+            width: 90%; /* Adjusted for better mobile spacing */
+            max-width: 1200px; /* Maintain max width for large screens */
             margin: auto;
             overflow: hidden;
             padding-top: 20px;
@@ -86,49 +87,49 @@
         }
 
         #showcase h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 10px;
         }
 
         #showcase p {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-bottom: 20px;
         }
 
         /* About section */
         #about {
-            padding: 50px 0;
+            padding: 50px 20px; /* Added padding for mobile */
             text-align: center;
         }
 
         #about h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 20px;
         }
 
         #about p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             margin-bottom: 20px;
         }
 
         /* Contact section */
         #contact {
-            padding: 50px 0;
+            padding: 50px 20px; /* Added padding for mobile */
             text-align: center;
         }
 
         #contact h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 20px;
         }
 
         #contact p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             margin-bottom: 20px;
         }
 
         #contact form {
-            max-width: 600px;
+            max-width: 100%; /* Full width on smaller screens */
             margin: auto;
             padding: 20px;
             background: #fff;
@@ -138,7 +139,7 @@
 
         #contact form input[type="text"],
         #contact form textarea {
-            width: 100%;
+            width: calc(100% - 22px); /* Full width with padding adjustment */
             padding: 10px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
@@ -166,9 +167,49 @@
         /* Footer styles */
         footer {
             text-align: center;
-            padding: 20px 0;
+            padding: 20px 20px; /* Adjusted for mobile */
             background: #4A4873;
             color: #fff;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            header nav ul li {
+                margin: 5px 0;
+            }
+
+            header h1 {
+                font-size: 1.2rem;
+                padding: 0;
+            }
+
+            #showcase h1 {
+                font-size: 2rem;
+            }
+
+            #showcase p {
+                font-size: 1rem;
+            }
+
+            #about h2,
+            #contact h2 {
+                font-size: 1.5rem;
+            }
+
+            #about p,
+            #contact p {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -232,4 +273,3 @@
     </script>
 </body>
 </html>
-
